@@ -3,12 +3,68 @@
  */
 package Quotes;
 
+import com.google.gson.*;
+import java.io.FileNotFoundException;
+import java.io.File;
+import java.io.FileReader;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+
+
 public class App {
-    public String getGreeting() {
-        return "Hello world.";
+
+        public int getRandomNumbers(int min, int max){
+            int range = (max - min) + 1;
+            return (int)(Math.random() * range) + min;
+        }
+
+    public int getSizeOfLists(ArrayList lister){
+        return lister.size();
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
+        public static void main(String[] args) {
+            App a = new App();
+            String filePath = "src/main/resources/recentquotes.json";
+            a.showRandomQuotes(filePath);
+        }
+
+    public String showRandomQuotes(String filePath){
+
+        ArrayList<String> quotes = new ArrayList<>();
+        ArrayList<String> author = new ArrayList<>();
+
+        String  getQuotes;
+        String getAuthor;
+
+        try{
+            File jsonFile = Paths.get(filePath).toFile();
+            Gson gson = new Gson();
+            JsonArray arrayOfConvertedJson = gson.fromJson(new FileReader(jsonFile), JsonArray.class);
+
+            for (int i = 0; i< arrayOfConvertedJson.size(); i++){
+                getQuotes = arrayOfConvertedJson.get(i).getAsJsonObject().get("text").getAsString();
+                getAuthor = arrayOfConvertedJson.get(i).getAsJsonObject().get("author").getAsString();
+                quotes.add(getQuotes);
+                author.add(getAuthor);
+            }
+
+        }catch (FileNotFoundException e) {
+            return ("File not found");
+        }
+
+
+
+        int randomQuoteNumber = getRandomNumbers(0, quotes.size());
+        System.out.println("Quote of the day:" + quotes.get(randomQuoteNumber) +
+                "\nAuthor: " + author.get(randomQuoteNumber));
+        return "Quote of the day:" + quotes.get(randomQuoteNumber) +
+                "\nAuthor: " + author.get(randomQuoteNumber);
+
     }
 }
+
+
+//References: https://java2blog.com/gson-example-read-and-write-json/
+//https://stackoverflow.com/questions/7961788/math-random-explanation
+
