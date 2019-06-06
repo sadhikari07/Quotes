@@ -27,6 +27,7 @@ public class App {
             App a = new App();
             String filePath = "src/main/resources/recentquotes.json";
             a.showRandomQuotes(filePath);
+            AltSolution obj = new AltSolution(filePath);
         }
 
     public String showRandomQuotes(String filePath){
