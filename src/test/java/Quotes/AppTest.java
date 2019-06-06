@@ -4,11 +4,36 @@
 package Quotes;
 
 import org.junit.Test;
+
+import java.io.FileNotFoundException;
+
 import static org.junit.Assert.*;
 
 public class AppTest {
-    @Test public void testAppHasAGreeting() {
+    @Test
+    public void testGetsRandomQuote() {
         App classUnderTest = new App();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+        String filePath = "src/main/resources/recentquotes.json";
+        String expectedOutput = classUnderTest.showRandomQuotes(filePath);
+        assertNotNull("Should be generating a random quote!", expectedOutput);
     }
+
+    @Test
+
+    public void testError() {
+        App classUnderTest = new App();
+        String filePath = "src/main/resources/recentquote.json";
+        String expectedOutput = classUnderTest.showRandomQuotes(filePath);
+        assertEquals("File not found should be displayed", expectedOutput, "File not found");
+    }
+
+    @Test
+    public void testGetsRandomNumber() {
+        App classUnderTest = new App();
+        String filePath = "src/main/resources/recentquotes.json";
+        int expectedOutput = classUnderTest.getRandomNumbers(3, 5);
+       assertNotEquals("Random number should be between 3 and 5", expectedOutput, 0);
+    }
+
+
 }
