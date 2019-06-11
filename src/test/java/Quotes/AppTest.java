@@ -3,9 +3,14 @@
  */
 package Quotes;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import org.junit.Test;
 
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.nio.file.Paths;
 
 import static org.junit.Assert.*;
 
@@ -13,27 +18,49 @@ public class AppTest {
     @Test
     public void testGetsRandomQuote() {
         App classUnderTest = new App();
-        String filePath = "src/main/resources/recentquotes.json";
-        String expectedOutput = classUnderTest.showRandomQuotes(filePath);
+        String enterUrl = "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote";
+        String expectedOutput = classUnderTest.showRandomQuotes(enterUrl);
         assertNotNull("Should be generating a random quote!", expectedOutput);
     }
 
     @Test
-
-    public void testError() {
+    public void testWhenUrlBreaks() {
         App classUnderTest = new App();
-        String filePath = "src/main/resources/recentquote.json";
-        String expectedOutput = classUnderTest.showRandomQuotes(filePath);
-        assertEquals("File not found should be displayed", expectedOutput, "File not found");
+        String enterUrl = "htttttttp://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote";
+        String expectedOutput = classUnderTest.showRandomQuotes(enterUrl);
+        assertNotNull("Should be generating a random quote!", expectedOutput);
     }
 
     @Test
-    public void testGetsRandomNumber() {
+    public void testIfAddingToFile() {
         App classUnderTest = new App();
-        String filePath = "src/main/resources/recentquotes.json";
-        int expectedOutput = classUnderTest.getRandomNumbers(3, 5);
-       assertNotEquals("Random number should be between 3 and 5", expectedOutput, 0);
+        int sizeOfFileAfterModification = 0;
+        int sizeOfFileBeforeModification = 0;
+        String enterUrl = "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote";
+        classUnderTest.showRandomQuotes(enterUrl);
+        try{
+        File jsonFile = Paths.get("src/main/resources/recentquotes.json").toFile();
+        Gson gson = new Gson();
+        JsonArray arrayOfConvertedJson = gson.fromJson(new FileReader(jsonFile), JsonArray.class);
+        sizeOfFileBeforeModification = arrayOfConvertedJson.size();
+        }catch (FileNotFoundException e){
+            System.out.println("File not found.");
+        }
+        App.showRandomQuotes(enterUrl);
+        try{
+            File jsonFile = Paths.get("src/main/resources/recentquotes.json").toFile();
+            Gson gson = new Gson();
+            JsonArray arrayOfConvertedJson = gson.fromJson(new FileReader(jsonFile), JsonArray.class);
+             sizeOfFileAfterModification = arrayOfConvertedJson.size();
+        }catch (FileNotFoundException e){
+            System.out.println("File not found.");
+        }
+        assertEquals("The number of items in the file should have increased by one", sizeOfFileAfterModification-sizeOfFileBeforeModification, 1);
     }
 
 
 }
+
+//If I had extra time, I would do following tests:
+//See if the format that my object are being stored in the file matcjhes the format of objects in the file.
+//Test error if url and local file are not working.
