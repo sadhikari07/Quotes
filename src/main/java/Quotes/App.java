@@ -4,64 +4,104 @@
 package Quotes;
 
 import com.google.gson.*;
-import java.io.FileNotFoundException;
-import java.io.File;
-import java.io.FileReader;
+
+import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
 
 public class App {
 
-        public int getRandomNumbers(int min, int max){
+        public static int getRandomNumbers(int min, int max){
             int range = (max - min) + 1;
             return (int)(Math.random() * range) + min;
         }
 
-    public int getSizeOfLists(ArrayList lister){
-        return lister.size();
-    }
+        public int getSizeOfLists(ArrayList lister){
+            return lister.size();
+        }
 
 
         public static void main(String[] args) {
-            App a = new App();
-            String filePath = "src/main/resources/recentquotes.json";
-            a.showRandomQuotes(filePath);
+            String enterUrl = "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote";
+            showRandomQuotes(enterUrl);
         }
 
-    public String showRandomQuotes(String filePath){
 
-        ArrayList<String> quotes = new ArrayList<>();
-        ArrayList<String> author = new ArrayList<>();
 
-        String  getQuotes;
-        String getAuthor;
+    public static String showRandomQuotes(String enterUrl){
+            String quoteToBeDisplayed = "";
 
-        try{
-            File jsonFile = Paths.get(filePath).toFile();
+        try {
+            URL url = new URL(enterUrl);
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+
+            BufferedReader reader = new BufferedReader(new InputStreamReader((con.getInputStream())));
+
             Gson gson = new Gson();
+            RandomQuotes randomQuotes = gson.fromJson(reader, RandomQuotes.class);
+
+            Quote toBeAddedToJson = new Quote(randomQuotes.starWarsQuote);
+
+            String json = gson.toJson(toBeAddedToJson);
+
+            //Reference: https://stackoverflow.com/questions/5245840/how-to-convert-jsonstring-to-jsonobject-in-java
+            JsonParser parser = new JsonParser();
+            JsonObject jsonObjectOfString = (JsonObject) parser.parse(json);
+
+
+            System.out.println("..........");
+            System.out.println(randomQuotes.starWarsQuote);
+
+            //To add the quote to the file:
+            File jsonFile = Paths.get("src/main/resources/recentquotes.json").toFile();
             JsonArray arrayOfConvertedJson = gson.fromJson(new FileReader(jsonFile), JsonArray.class);
+            arrayOfConvertedJson.add(jsonObjectOfString);
 
-            for (int i = 0; i< arrayOfConvertedJson.size(); i++){
-                getQuotes = arrayOfConvertedJson.get(i).getAsJsonObject().get("text").getAsString();
-                getAuthor = arrayOfConvertedJson.get(i).getAsJsonObject().get("author").getAsString();
-                quotes.add(getQuotes);
-                author.add(getAuthor);
+                try {
+                    FileWriter newFile = new FileWriter("src/main/resources/recentquotes.json");
+                    newFile.write(arrayOfConvertedJson.toString());
+                    newFile.close();
+                } catch (FileNotFoundException a) {
+                    System.out.println("File not found.");
+                }
+                quoteToBeDisplayed = randomQuotes.starWarsQuote;
+
+
+        } catch (IOException e) {
+            try{
+                ArrayList<String> quotes = new ArrayList<>();
+                ArrayList<String> author = new ArrayList<>();
+                String  getQuotes;
+                String getAuthor;
+
+                File jsonFile = Paths.get("src/main/resources/recentquotes.json").toFile();
+
+                Gson gson = new Gson();
+                JsonArray arrayOfConvertedJson = gson.fromJson(new FileReader(jsonFile), JsonArray.class);
+
+                for (int i = 0; i< arrayOfConvertedJson.size(); i++){
+                    getQuotes = arrayOfConvertedJson.get(i).getAsJsonObject().get("text").getAsString();
+                    getAuthor = arrayOfConvertedJson.get(i).getAsJsonObject().get("author").getAsString();
+                    quotes.add(getQuotes);
+                    author.add(getAuthor);
             }
+                int randomQuoteNumber = getRandomNumbers(0, quotes.size());
+                quoteToBeDisplayed = quotes.get(randomQuoteNumber);
+                System.out.println(quoteToBeDisplayed);
+                System.out.println(author.get(randomQuoteNumber));
 
-        }catch (FileNotFoundException e) {
-            return ("File not found");
+        }catch (IOException error) {
+                System.out.println("error");
+                quoteToBeDisplayed = "Error";
         }
 
-
-
-        int randomQuoteNumber = getRandomNumbers(0, quotes.size());
-        System.out.println("Quote of the day:" + quotes.get(randomQuoteNumber) +
-                "\nAuthor: " + author.get(randomQuoteNumber));
-        return "Quote of the day:" + quotes.get(randomQuoteNumber) +
-                "\nAuthor: " + author.get(randomQuoteNumber);
-
+        }
+        return quoteToBeDisplayed;
     }
+
 }
 
 

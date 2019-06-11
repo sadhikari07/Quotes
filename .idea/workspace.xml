@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e52edba1-e845-46d6-85a5-5cc9effbd73d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Quotes/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Quotes/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/recentquotes.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/recentquotes.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Quotes/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Quotes/AppTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
@@ -26,35 +27,79 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Quotes/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="52" column="38" lean-forward="true" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+            <state relative-caret-position="330">
+              <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#489#490#0" expanded="true" />
-                <element signature="e#517#518#0" expanded="true" />
+                <element signature="e#525#526#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/recentquotes.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="35927" lean-forward="true" selection-start-column="35927" selection-end-column="35927" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Quotes/RandomQuotes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+              <folding>
+                <element signature="e#120#121#0" expanded="true" />
+                <element signature="e#161#162#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Quotes/Quote.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Quotes/AppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state relative-caret-position="467">
+              <caret line="47" column="9" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="47" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>no cur</find>
       <find>a person</find>
+      <find>the force will</find>
+      <find>there are f</find>
+      <find>patrick ne</find>
+      <find>gson</find>
+      <find>add</find>
+      <find>but what</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -64,22 +109,17 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/Quotes/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Quotes/Quote.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Quotes/RandomQuotes.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/recentquotesupdated.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/recentquotes.json" />
         <option value="$PROJECT_DIR$/src/test/java/Quotes/AppTest.java" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/gradle.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Quotes/App.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="58" />
+    <option name="x" value="13" />
     <option name="y" value="23" />
     <option name="width" value="1399" />
     <option name="height" value="877" />
@@ -89,7 +129,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,10 +194,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
   </component>
@@ -179,7 +220,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Quotes.App" />
       <module name="Quotes.main" />
@@ -208,38 +249,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.testError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Quotes.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Quotes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Quotes" />
-      <option name="MAIN_CLASS_NAME" value="Quotes.AppTest" />
-      <option name="METHOD_NAME" value="testError" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppTest.testGetsRandomNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Quotes.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Quotes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Quotes" />
-      <option name="MAIN_CLASS_NAME" value="Quotes.AppTest" />
-      <option name="METHOD_NAME" value="testGetsRandomNumber" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AppTest.testGetsRandomQuote" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Quotes.test" />
       <extension name="coverage">
@@ -256,13 +265,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppTest.testIfAddingToFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Quotes.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Quotes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Quotes" />
+      <option name="MAIN_CLASS_NAME" value="Quotes.AppTest" />
+      <option name="METHOD_NAME" value="testIfAddingToFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testWhenUrlBreaks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Quotes.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Quotes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Quotes" />
+      <option name="MAIN_CLASS_NAME" value="Quotes.AppTest" />
+      <option name="METHOD_NAME" value="testWhenUrlBreaks" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AppTest" />
-        <item itemvalue="JUnit.AppTest.testError" />
         <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.AppTest.testGetsRandomNumber" />
+        <item itemvalue="JUnit.AppTest.testIfAddingToFile" />
+        <item itemvalue="JUnit.AppTest.testWhenUrlBreaks" />
         <item itemvalue="JUnit.AppTest.testGetsRandomQuote" />
+        <item itemvalue="JUnit.AppTest" />
       </list>
     </recent_temporary>
   </component>
@@ -280,21 +321,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AppTest_testError - 2019.06.06 at 11h 11m 43s.xml">
-      <configuration name="AppTest.testError" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppTest_testError - 2019.06.06 at 11h 13m 17s.xml">
-      <configuration name="AppTest.testError" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppTest_testError - 2019.06.06 at 11h 13m 30s.xml">
-      <configuration name="AppTest.testError" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppTest - 2019.06.06 at 11h 17m 51s.xml">
-      <configuration name="AppTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppTest - 2019.06.06 at 11h 17m 59s.xml">
-      <configuration name="AppTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AppTest_testError - 2019.06.06 at 11h 20m 10s.xml">
       <configuration name="AppTest.testError" configurationId="JUnit" />
     </history-entry>
@@ -310,12 +336,27 @@
     <history-entry file="AppTest_testError - 2019.06.06 at 11h 24m 07s.xml">
       <configuration name="AppTest.testError" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AppTest_testError - 2019.06.06 at 11h 26m 22s.xml">
+      <configuration name="AppTest.testError" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest - 2019.06.06 at 11h 27m 21s.xml">
+      <configuration name="AppTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_testGetsRandomQuote - 2019.06.11 at 11h 41m 42s.xml">
+      <configuration name="AppTest.testGetsRandomQuote" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_testWhenUrlBreaks - 2019.06.11 at 11h 45m 24s.xml">
+      <configuration name="AppTest.testWhenUrlBreaks" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_testIfAddingToFile - 2019.06.11 at 12h 00m 44s.xml">
+      <configuration name="AppTest.testIfAddingToFile" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="58" y="23" width="1399" height="877" extended-state="0" />
+    <frame x="13" y="23" width="1399" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18570375" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19012527" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -324,7 +365,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32939634" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23097113" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39895013" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -333,7 +374,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.3387534" />
-      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32939634" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -356,29 +397,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/recentquotes.json">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_212.jdk/Contents/Home/src.zip!/java/net/PlainSocketImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17737">
-          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        <state relative-caret-position="143">
+          <caret line="96" column="16" selection-start-line="96" selection-start-column="16" selection-end-line="96" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Quotes/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/recentquotesupdated.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="52" column="38" lean-forward="true" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+        <state>
+          <caret column="34112" selection-start-column="34112" selection-end-column="34112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Quotes/RandomQuotes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#120#121#0" expanded="true" />
+            <element signature="e#161#162#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Quotes/Quote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/recentquotes.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35927" lean-forward="true" selection-start-column="35927" selection-end-column="35927" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Quotes/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        <state relative-caret-position="467">
+          <caret line="47" column="9" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="47" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Quotes/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#489#490#0" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
